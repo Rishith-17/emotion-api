@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: emotion-api
+    env: python
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    pythonVersion: 3.10.13
